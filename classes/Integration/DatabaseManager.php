@@ -6,7 +6,7 @@ class DatabaseManager {
     
 public function postReview(string $review,string $username,string $table){
     {
-         require_once '../../Resources/Database/config2.php';    
+         require_once 'Resources/Database/config2.php';    
          
        $sql = "INSERT INTO $table (username, review) VALUES ('$username', '$review' )";
    $result = mysqli_query($link, $sql);
@@ -15,7 +15,7 @@ public function postReview(string $review,string $username,string $table){
 }
 
 public function deleteReview(string $table,int $id){
- require_once '../../Resources/Database/config2.php';    
+ require_once 'Resources/Database/config2.php';    
        $sql = "DELETE FROM $table WHERE id='$id'";
     $result = mysqli_query($link, $sql);
 }

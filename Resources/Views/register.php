@@ -107,21 +107,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     echo '<p class= black>Create your free account now to get started!</p>';
   }
   ?>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+        <form action="../../do-register.php" method="post">
+            <div class="form-group">
                 <label>Username:<sup>*</sup></label>
-                <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
+                <input type="text" name="username"class="form-control">
             </div>    
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+            <div class="form-group">
                 <label>Password:<sup>*</sup></label>
-                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
-                <span class="help-block"><?php echo $password_err; ?></span>
+                <input type="password" name="password" class="form-control">
             </div>
-            <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+            <div class="form-group">
                 <label>Confirm Password:<sup>*</sup></label>
-                <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
-                <span class="help-block"><?php echo $confirm_password_err; ?></span>
+                <input type="password" name="confirm_password" class="form-control">
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">

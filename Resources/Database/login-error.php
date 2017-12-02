@@ -17,7 +17,7 @@
   <li><a href=Resources/Views/calendar.php>Calendar</a></li>
   <li style="float:right"> <a href=Resources/Views/register.php>Register</a></li>
    <?php if($_SESSION['loggedin'] == false) {
-  echo '<li style="float:right"><a href=login.php>Log in</a></li>'; 
+  echo '<li style="float:right"><a href=Resources/Views/login.php>Log in</a></li>'; 
   }
   else {
     echo '<li style="float:right"><a href=logout.php>Log out</a></li>';
