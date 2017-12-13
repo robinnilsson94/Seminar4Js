@@ -8,6 +8,8 @@ if (isset($_POST['reviewSubmit']))
          $username = $_POST['username'];
          $table = $_POST['table'];
          $next =  $_POST['next'];
-         $contr->postReview($review, $username, $table);
+         if (ctype_print($review)){
+             $contr->postReview($review, $username, $table);
+         }
     header($next);
        }

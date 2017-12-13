@@ -1,6 +1,6 @@
 <?php
 
-namespace Model;
+namespace Integration;
 
 class UserManager {
 
@@ -56,9 +56,7 @@ $username_err = $password_err = "";
                 } else{
                     $username_err = 'No account found with that username.';
                 }
-            } else{
-                echo "Some mistake was made. Please try again later.";
-            }
+            } 
         }
         
         mysqli_stmt_close($stmt);
@@ -99,9 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $username = trim($user);
                 }
             } 
-            else{
-                echo "Sorry, a mistake was made! Please try again later.";
-            }
+            
         }
         mysqli_stmt_close($stmt);
     }
@@ -141,9 +137,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
                
                 header("location: Resources/Views/login.php");
-            } else{
-                echo "Something went wrong. Please try again later.";
-            }
+            } 
         }
          
         mysqli_stmt_close($stmt);

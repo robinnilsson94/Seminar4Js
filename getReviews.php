@@ -6,4 +6,13 @@ StartUp::initRequest2();
 
   use Controller\Controller;
   $contr = Controller::getController();
-$contr->getReviews($table);
+$reviews = $contr->getReviews($table);
+Foreach ($reviews as $review){
+     echo "<div>";    
+        echo "<p class = username>";
+        echo "Reviewer: ";    
+        echo $contr->getUsername($review)."<br>";  
+        echo "</p>";
+        echo $contr->getReview($review)."<br>";
+    echo "</div>";
+}
