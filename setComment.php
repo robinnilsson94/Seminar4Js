@@ -2,14 +2,12 @@
 require_once 'Resources/Fragments/init.php';
   use Controller\Controller;
   $contr = Controller::getController();
-if (isset($_POST['reviewSubmit']))
-    {
-         $review = $_POST['review'];
-         $username = $_POST['username'];
-         $table = $_POST['table'];
-         $next =  $_POST['next'];
-         if (ctype_print($review)){
-             $contr->postReview($review, $username, $table);
-         }
-    header($next);
-       }
+  $review = $_GET['review'];
+  $username = $_GET['username'];
+  $table = $_GET['recipe'];
+  if (ctype_print($review)){
+      $contr->postReview($review, $username, $table);
+  }
+ 
+  $completed = true;
+  echo \json_encode($completed);     

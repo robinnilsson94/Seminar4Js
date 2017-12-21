@@ -6,6 +6,10 @@ $url = "location: Resources/Views/Meatballs.php";
 ?>
 <!DOCTYPE html>
 <html>
+    <script src = "../../JavaScript.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+ 
     <head>
         <title>Meatballs recipe</title>
         <meta charset="UTF-8">
@@ -16,6 +20,8 @@ $url = "location: Resources/Views/Meatballs.php";
     <body>
     <?php include '../Fragments/navigationBar.php' ?>
        <h1>Tasty Recipes</h1>
+
+
         <p id=special>A good recipe for life</p>
        <h3>Meatballs</h3>
         <p id=special2>People who likes this recipe also liked</p>
@@ -44,17 +50,22 @@ $url = "location: Resources/Views/Meatballs.php";
         </p>
           <span> </span>
         <h3>Directions</h3>
+          
         <p>
             1. Heat oven to 400°F. Line 13x9-inch pan with foil; spray with cooking spray.
+          
         <p>
             2. In large bowl, mix all ingredients. Shape mixture into 20 to 24 (1 1/2-inch) meatballs. Place 1 inch apart in pan.
         <p>
             3. Bake uncovered 18 to 22 minutes or until no longer pink in center.
         </p>
           <span> </span>
+                   
         <h3>Reviews</h3>
-   <?php include '../Fragments/postReview.php' ?>  
- <?php include '../Fragments/loadReviews.php' ?>        
+                   
+  <?php include '../Fragments/postReview.php' ?>    
+       <u1 id="reviews"></u1>
+   <?php include '../Fragments/loadReviews.php' ?> 
     </body>
 </html>
 

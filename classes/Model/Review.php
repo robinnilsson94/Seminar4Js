@@ -2,7 +2,7 @@
 
 namespace Model;
 
-class Review {
+class Review implements \JsonSerializable{
     private $username;
     private $review;
     private $id;
@@ -21,5 +21,14 @@ class Review {
     }
     public function getID() {
         return $this->id;
+    }
+    
+    public function jsonSerialize() {
+        $json_obj = new \stdClass();
+         $json_obj->review = $this->review;
+         $json_obj->username = $this->username;
+         $json_obj->id = $this->id;
+         
+         return $json_obj;
     }
 }

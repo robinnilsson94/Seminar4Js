@@ -2,9 +2,12 @@
 require_once '../Fragments/sessionStart.php';
 $table = "reviewTable";
 $url = "location: Resources/Views/Pancakes.php";
+$int = "40";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+      <script src = "../../JavaScript.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <head>
         <title>Pancakes recipe</title>
         <meta charset="UTF-8">
@@ -49,13 +52,13 @@ $url = "location: Resources/Views/Pancakes.php";
         <p>
             3. Bake uncovered 18 to 22 minutes or until no longer pink in center.
         </p>
-          <span> </span>
+          <span> </span> 
         <h3>Reviews</h3>
-     <?php include '../Fragments/postReview.php' ?>  
-    
-      <?php include '../Fragments/loadReviews.php' ?>    
        
-        
+     <?php include '../Fragments/postReview.php' ?>  
+         <u1 id="reviews"></u1>
+        <?php include '../Fragments/loadReviews.php' ?>
+             
     </body>
 </html>
 

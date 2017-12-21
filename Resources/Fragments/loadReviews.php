@@ -1,10 +1,10 @@
         <span> </span>
 <?php
      if($_SESSION['loggedin'] == false) {
-  include '../../getReviews.php';          
+      include '../Fragments/reviewGet.php';
   }
  else {
-     include '../../userGetReviews.php';      
+     include '../Fragments/userReviewGet.php';      
  }
 ?>
       

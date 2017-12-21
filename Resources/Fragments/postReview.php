@@ -5,9 +5,9 @@
   }
   else {
       echo
-        "<form  method = 'POST' action = '../../setComment.php'>
+        "<form  method = 'POST' onSubmit = 'setReview(); return false'>
         <p> Write your review here: </p>  <textarea rows = '10' cols = '30' name = 'review'></textarea><br/>  <input type= 'hidden' name = 'table' value='$table'> 
-       <input type= 'hidden' name = 'username' value='$username'>  <input type='hidden' name='next' value='$url'>
+       <input type= 'hidden' name = 'username' value='$username'> 
        <button type = 'submit' name = 'reviewSubmit'> Post </button>
         </form>";
     }

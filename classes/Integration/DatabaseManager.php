@@ -5,7 +5,7 @@ use Controller\Controller;
 
 class DatabaseManager {
     
-public function postReview(string $review,string $username,string $table){
+public function postReview (string $review,string $username,string $table){
     {
          require_once 'Resources/Database/config2.php';    
          
@@ -15,14 +15,14 @@ public function postReview(string $review,string $username,string $table){
 
 }
 
-public function deleteReview(string $table,int $id){
+public function deleteReview(string $table,string $user){
  require_once 'Resources/Database/config2.php';    
-       $sql = "DELETE FROM $table WHERE id='$id'";
+       $sql = "DELETE FROM $table WHERE username='$user'";
     $result = mysqli_query($link, $sql);
 }
 
 public function getReviews(string $table){
-     require_once '../../Resources/Database/config2.php'; 
+     require_once 'Resources/Database/config2.php'; 
      $sql = "SELECT * FROM $table";
     $result = $link->query($sql);
     $reviews = array();

@@ -22,8 +22,8 @@ Class Controller {
 public function postReview(string $review,string $username,string $table){
     $this->dbM->postReview($review, $username, $table);
 }
-public function deleteReview(string $table,int $id){
-    $this->dbM->deleteReview($table,$id);
+public function deleteReview(string $table,string $user){
+    $this->dbM->deleteReview($table,$user);
 }
 public function getReviews(string $table){
     return $this->dbM->getReviews($table);
@@ -37,9 +37,7 @@ public function getReview(Review $review){
 public function getID(Review $review){
     return $review -> getID();
 }
-public function userGetReviews(string $username,string $table,string $url){
-    $this->dbM->userGetReviews($username,$table,$url);
-}
+
 public function createReview(string $username, string $review, int $id){
     return new Review($username, $review, $id);
 }
